@@ -2,7 +2,7 @@ import turtle
 import time
 import random
 import easygui
-from GameStyle import GameStyle as style
+from styles.GameStyle import GameStyle as style
 
 class GameSetting:
 

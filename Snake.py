@@ -3,7 +3,8 @@ import platform
 import turtle
 import time
 import random
-import playsound
+if platform.system() == 'Windows':
+    import playsound
 import easygui
 from settings.GameSetting import GameSetting as settings
 from styles.GameStyle import GameStyle as style

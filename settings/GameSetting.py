@@ -1,7 +1,6 @@
 import turtle
 import time
 import random
-import easygui
 from styles.GameStyle import GameStyle as style
 
 class GameSetting:

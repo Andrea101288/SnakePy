@@ -5,7 +5,7 @@ import time
 import random
 if platform.system() == 'Windows':
     import playsound
-import easygui
+# import easygui
 from settings.GameSetting import GameSetting as settings
 from styles.GameStyle import GameStyle as style
 

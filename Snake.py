@@ -4,7 +4,7 @@ import turtle
 import time
 import random
 import playsound
-import easygui
+# import easygui
 from settings.GameSetting import GameSetting as settings
 from styles.GameStyle import GameStyle as style
 

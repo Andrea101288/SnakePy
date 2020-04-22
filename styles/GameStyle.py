@@ -49,6 +49,11 @@ class GameStyle:
     # set iniitial coordinates for food
     food.goto(0,100)
 
+    # Snake Head creation
+    mypen = turtle.Turtle()
+    # set head color
+    mypen.color("white")
+
     # define segments array to add everytime we get food
     segments = []    
 

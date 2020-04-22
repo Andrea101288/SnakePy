@@ -34,9 +34,14 @@ def play():
            playsound.playsound(styles.eating_sound, 0)
         else:
             os.system("afplay "+styles.eating_sound+"&")
-        
-        styles.score += 1
-        print(styles.score)
+        #draw score on the screen
+        styles.score += 10
+        styles.mypen.undo()
+        styles.mypen.penup()
+        styles.mypen.hideturtle()
+        styles.mypen.setposition(-280, 255)
+        score_string = "Score: %s" %styles.score
+        styles.mypen.write(score_string, False, align='left', font=("Brush Script MT", 25, "bold"))
         x = random.randint(-290,290)
         y = random.randint(-290, 290)
         styles.food.goto(x, y)
@@ -53,7 +58,9 @@ def play():
         # set initial penup method
         new_segment.penup()
         # add new segment to the snake 
-        styles.segments.append(new_segment)    
+        styles.segments.append(new_segment) 
+        
+           
 
     # Move the end Segment in first in reverse order
     for index in range(len(styles.segments)-1, 0, -1):        
@@ -68,6 +75,8 @@ def play():
         y = styles.head.ycor()
         # move segment 0 in head
         styles.segments[0].goto(x,y)
+    
+
 
     # get position 
     w, h = styles.head.position()
